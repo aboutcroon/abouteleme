@@ -2,7 +2,7 @@
     <div>
         <!--signin-up是为了显示登录注册标签-->
         <head-top signin-up="home" class="city_head">
-            <span slot="logo" class="head_logo">abouteleme</span>
+            <span slot="logo" class="head_logo" @click="reload">abouteleme</span>
         </head-top>
         <nav class="city_nav">
             <div class="city_tip">
@@ -85,7 +85,12 @@
       }
     },
 
-    methods: {}
+    methods: {
+      // 点击图标刷新页面
+      reload() {
+        window.location.reload()
+      }
+    }
   }
 </script>
 
